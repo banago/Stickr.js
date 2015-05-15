@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Stickr.js - Contained Sticky Scrolling jQuery Plugin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <style type="text/css">
+        .clearfix:after {
+				content: ".";
+				display: block;
+				clear: both;
+				visibility: hidden;
+				line-height: 0;
+				height: 0;
+			}
+        .cont { float: left; width: 67%; }
+        .side { float: right; width: 28%; }
+        .main-content hr { margin: 2rem 0; }
+    </style>
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Stickr.js</h1>
+      <h2 class="project-tagline">Contained Sticky Scrolling jQuery Plugin</h2>
+      <a href="https://github.com/banago/stickr.js" class="btn">View on GitHub</a>
+      <a href="https://github.com/banago/stickr.js/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/banago/stickr.js/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+    
+        <h2>Introduction</h2>
+        <p><code>Stickr.js</code> is a jQuery plugin that helps you create multiple sticky elements on a page and comes with a robust set of options 
+        that allows anyone to make it work great on their setup. It is designed to allow an element to stick to the top of the screen as 
+        while scrolling without moving outside of the parent container or the container set in the options. </p>        
+		<p><code>Stickr.js</code> is designed to allow an element to stick to the top of the screen as page scrolls down, 
+		but without moving outside of the parent container.</p>
+        <hr>
+
+	<div class="clearfix">
+	
+		<div class="cont">
+		
+    		<h3>Example Nr. 1</h3>
+            <p>In the first example the plugin is called with no options, which means default options are applied.</p>
+            
+            <h3>Usage</h3>
+    		<p>The sidebar on the right is working using the default options. The following code was used for it:</p>
+    				
+    		<pre><code>$('#side-1').stickr();</code></pre>
+            
+    		<p>Here are all the options offered by the plugin and their default values:</p>
+    		
+    		<div id="stickr-options" class="options">
+    		<table>
+    		<tr>
+    		<th>easing</th>
+    		<td><i>string</i> - Allows the user to set the type of easing to be used in the animation. Defaults to <code>swing</code>.</td>
+    		</tr>
+    		<tr>
+    		<th>duration</th>
+    		<td><i>numeric</i> - Allows the user to set the duration of the animation. Defaults to <code>300</code>.</td>
+    		</tr>
+    		<tr>
+    		<th>closeButton</th>
+    		<td><i>boolean</i> - Allows the user to show the close button or not. Defaults to <code>false</code>, not showing by default.</td>
+    		</tr>
+    		<tr>
+    		<th>closeChar</th>
+    		<td><i>string</i> - Allows the user to set the character or text to be used as the close button. Defaults to <code>&#9447;</code>.</td>
+    		</tr>
+    		<tr>
+    		<th>closeTop</th>
+    		<td><i>numeric</i> - Allows the user to set relative position of the close button to the top of the selected element, in pixels. Defaults to <code>0</code>.</td>
+    		</tr>
+    		<tr>
+    		<th>closeRight</th>
+    		<td><i>numeric</i> - Allows the user to set relative position of the close button to the right of the selected element, in pixels. Defaults to <code>0</code>.</td>
+    		</tr>
+    		<tr>
+    		<th>closest</th>
+    		<td><i>string</i> - Allows the user to set a different parent up the rather then the direct one, by using the <code>.closest()</code> method to search through the ancestors in the DOM tree. Defaults to <code>null</code>, using the direct parent element.</td>
+    		</tr>
+    		<tr>
+    		<th>offsetTop</th>
+    		<td><i>numeric</i> - Allows the user to set an offset to in pixels to alter the point where from where you want the sticking to start. Defaults to <code>0</code>.</td>
+    		</tr>
+    		<tr>
+    		<th>offsetBottom</th>
+    		<td><i>numeric</i> - Allows the user to set an offset to in pixels to alter the point where from where you want the sticking to stop. Defaults to <code>0</code>.</td>
+    		</tr>
+            <tr>
+    		<th>queue</th>
+    		<td><i>boolean</i> - Allows the user to set whether the animation is placed into the queue. If false, animation starts immediately. Defaults to <code>false</code>.</td>
+    		</tr>
+    		</table>
+    		</div><!-- .options -->
+		
+		</div><!-- .cont -->
+			
+		<div id="side-1" class="side">
+		
+            <h3>Sidebar Nr. 1</h3>
+            <p>This is a sticky element using the default <code>stickr</code> settings. Keep scrolling ...</p>
+            
+		</div><!-- .side -->
+	
+	</div>
+
+<hr>
+
+	<div class="clearfix">
+	
+		<div class="cont">
+		
+    		<h3>Example Nr. 2</h3>
+            <p>In the second example we are showing the close button and give it a bit of margin on top and left, so it looks good. If you click it
+            the sidebar will behave as a normal piece of <code>html</code> that won't stick.</p>
+    
+            <h3>Usage</h3>
+    		<p>The sidebar on the right is working using the following options as below:</p>
+    				
+    		<pre><code>$('#side-2').stickr({
+    closeButton: true,
+    closeTop: 5,
+    closeRight: 5
+});</code></pre>
+            
+    		<p>Here are all the options offered by the plugin and their default values:</p>
+    		
+    		<div class="options empty"></div><!-- .options -->
+		
+		</div><!-- .cont -->
+			
+		<div id="side-2" class="side">
+		
+            <h3>Sidebar Nr. 2</h3>
+            <p>This is a sticky element using the <code>stickr</code> settings as shown on the left. Keep scrolling ...</p>
+            
+		</div><!-- .side -->
+	
+	</div>
+	
+<hr>
+
+	<div class="clearfix">
+	
+		<div class="cont">
+		
+    		<h3>Example Nr. 3</h3>
+            <p>In the third example we are using <code>duration</code> as <code>0</code> so it sticks all the time in stead of delayed 
+            animation. Also, here we use offset from top and bottom so the sidebar does have a bit of magin from top and bottom. </p>
+    
+            <h3>Usage</h3>
+    		<p>The sidebar on the right is working using the following options as below:</p>
+    				
+    		<pre><code>$('#side-3').stickr({
+    duration: 0,
+    offsetTop: 30,
+    offsetBottom: 30
+});</code></pre>
+            
+    		<p>Here are all the options offered by the plugin and their default values:</p>
+    		
+    		<div class="options empty"></div><!-- .options -->
+		
+		</div><!-- .cont -->
+			
+		<div id="side-3" class="side">
+		
+            <h3>Sidebar Nr. 3</h3>
+            <p>This is a sticky element using the <code>stickr</code> settings as shown on the left. Keep scrolling ...</p>
+            
+		</div><!-- .side -->
+	
+	</div>
+
+<hr>
+
+    <h3>Authors and Contributors</h3>
+    
+    <p>This plugin is developed by <a href="http://wplancer.com/">Baki Goxhaj</a> and is inspired by the work of 
+    <a href="http://blog.echoenduring.com/2010/11/15/freebie-contained-sticky-scroll-jquery-plugin/">Matt Ward</a></p>
+    
+    <h3>Support</h3>
+    <p>If you've any questions or suggestions about <code>Stickr</code>, <a href="https://github.com/banago/stickr.js/issues">you should create an issue here</a>.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/banago/stickr.js">Stickr.js</a> is maintained by <a href="https://github.com/banago">banago</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="javascripts/jquery.stickr.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+        
+        var options = $('#stickr-options');
+        
+        $('.options.empty').html(options.html());	
+	
+		$('#side-1').stickr();
+		
+		$('#side-2').stickr({
+            closeButton: true,
+            closeTop: 5,
+            closeRight: 5            		
+		});
+
+        $('#side-3').stickr({
+            duration: 0,
+            offsetTop: 30,
+            offsetBottom: 30
+        });		
+		
+	});
+
+	</script>
+
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try {
+      var pageTracker = _gat._getTracker("UA-4384061-5");
+    pageTracker._trackPageview();
+    } catch(err) {}
+  </script>
+
+  </body>
+</html>
+
