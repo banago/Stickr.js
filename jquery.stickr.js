@@ -40,7 +40,7 @@
                 				  
                 	var s = this.settings,
                 	    el = $(this.element),
-                	    rel = this.element,
+                	    namespace = el.prop('id').replace('-','') || 'stickr',
                 	    parentEl = s.closest ? el.closest(s.closest) : el.parent(),
                 	    relativeOffset = (el.offset().top - parentEl.offset().top) - s.offsetTop;
                 	
@@ -53,11 +53,12 @@
                 		
                 		el.find('.close').on('click', function() {
                 			el.animate({ top: "0px" }, { queue: s.queue, easing: s.easing, duration: s.duration });
+                			$(window).off('scroll.' + namespace);
                 			$(this).remove();
                 		});
                 	}
 
-                    $(window).scroll(function() 
+                    $(window).on('scroll.' + namespace, function(e) 
                     {
                         if($(window).scrollTop() > (parentEl.offset().top + relativeOffset) && ((parentEl.height() + parentEl.position().top) + s.offsetBottom) > ($(window).scrollTop() + el.height()))
                         {

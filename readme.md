@@ -4,6 +4,8 @@
 
 `Stickr.js` is designed to allow an element to stick to the top of the screen as page scrolls down, but without moving outside of the parent container.
 
+Demo + Documentation: http://banago.github.io/Stickr.js/
+
 ## Contribute
 
 If you've got any questions or suggestions about Stickr.js, [you should create an issue here](https://github.com/banago/Stickr.js/issues). 
