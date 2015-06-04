@@ -1,0 +1,23 @@
+{
+  "name": "stickr.js",
+  "version": "1.0.1",
+  "description": "Contained Sticky Scrolling jQuery Plugin",
+  "main": "jquery.stickr.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/banago/Stickr.js.git"
+  },
+  "keywords": [
+    "sticky",
+    "scrolling",
+    "jquery"
+  ],
+  "author": "Baki Goxhaj <banago@gmail.com> (http://wplancer.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/banago/Stickr.js/issues"
+  }
+}
