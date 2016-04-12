@@ -14,7 +14,7 @@
 		var pluginName = "stickr",
 			defaults = {
         		easing: 'swing',
-        		duration: 300,
+        		duration: 500,
         		closeButton: false,
         		closeChar: 'ⓧ',
         		closeTop: 0,
